@@ -1,0 +1,234 @@
+swagger: '2.0'
+info:
+  title: SID
+  version: '1.0'
+paths:
+  /:
+    get:
+      parameters:
+      - in: query
+        type: string
+        name: "unidade"
+        required: false
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/DisciplinaList'
+  /{codigo}:
+    get:
+      parameters:
+      - in: path
+        type: string
+        name: "codigo"
+        required: true
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/Disciplina'
+definitions:
+  Matricula:
+    type: object
+    properties:
+      status:
+        type: string
+      aluno:
+        $ref: '#/definitions/Aluno'
+      turma:
+        $ref: '#/definitions/Turma'
+  Aluno:
+    type: object
+    properties:
+      matricula:
+        type: string
+      nome:
+        type: string
+      curriculo:
+        type: string
+      ira:
+        type: number
+  Turma:
+    type: object
+    properties:
+      codigo:
+        type: string
+      vagasOfertadas:
+        type: number
+      vagasOcupadas:
+        type: number
+      periodoLetivo:
+        $ref: '#/definitions/PeriodoLetivo'
+      disciplinaShort:
+        $ref: '#/definitions/DisciplinaShort'
+      horarioSemanal:
+        type: array
+        items:
+          $ref: '#/definitions/HorarioSemanal'
+  PeriodoLetivo:
+    type: object
+    properties:
+      ano:
+        type: number
+      numero:
+        type: number
+  Disciplina:
+    type: object
+    properties:
+      codigo:
+        type: string
+      nome:
+        type: string
+      unidade:
+        $ref: '#/definitions/Unidade'
+      preRequisitos:
+        $ref: '#/definitions/DisciplinaList'
+      cargaHoraria:
+        $ref: '#/definitions/CargaHoraria'
+  DisciplinaList:
+    type: array
+    items:
+      $ref: '#/definitions/DisciplinaShort'
+  DisciplinaShort:
+    type: object
+    properties:
+      codigo:
+        type: string
+      nome:
+        type: string
+  HorarioSemanal:
+    type: object
+    properties:
+      dia:
+        type: string
+      horaInicio:
+        type: string
+      horaFim:
+        type: string
+      professor:
+        type: array
+        items:
+          $ref: '#/definitions/Professor'
+      localidade:
+        $ref: '#/definitions/Localidade'
+  Professor:
+    type: object
+    properties:
+      nome:
+        type: string
+  Localidade:
+    type: object
+  Unidade:
+    type: object
+    properties:
+      codigo:
+        type: string
+      nome:
+        type: string
+  CargaHoraria:
+    type: object
+    properties:
+      teorica: 
+        type: integer
+      pratica:
+        type: integer
+  CargaHorariaLong:
+    type: object
+    properties:
+      totalMinima:
+        type: integer
+      totalObrigatoria:
+        type: integer
+      optativaMinima:
+        type: integer
+      complementarMinima:
+        type: integer
+      maximaPeriodoLetivo:
+        type: integer
+  Prazo:
+    type: object
+    properties:
+      minimo: 
+        type: integer
+      medio:
+        type: integer
+      maximo:
+        type: integer
+  HistoricoAcademico:
+    type: object
+    properties:
+      aluno:
+        $ref: '#/definitions/Aluno'
+      disciplinas:
+        type: array
+        items:
+          $ref: '#/definitions/TurmaHistoricoAcademico'
+  TurmaHistoricoAcademico:
+    type: object
+    properties:
+      aprovacao:
+        type: boolean
+      mencao:
+        type: string
+      turma:
+        $ref: '#/definitions/Turma'
+  Coordenador:
+    type: object
+    properties:
+      nome:
+       type: string
+  DisciplinaEstruturaCurricular:
+    type: object
+    properties:
+      tipo:
+        type: string
+      nivel:
+        type: string
+      modalidade:
+        type: string
+      disciplina:
+        $ref: '#/definitions/Disciplina'
+  EstruturaCurricular:
+    type: object
+    properties:
+      codigo:
+        type: string
+      status:
+        type: string
+      disciplinas:
+        type: array
+        items:
+          $ref: '#/definitions/DisciplinaEstruturaCurricular'
+      prazo:
+        $ref: '#/definitions/Prazo'
+      cargaHoraria:
+        $ref: '#/definitions/CargaHorariaLong'
+      peridoLetivoVigencialInicial:
+        $ref: '#/definitions/PeriodoLetivo'
+  Curso:
+    type: object
+    properties:
+      codigo:
+        type: string
+      nome:
+        type: string
+      modalidade:
+        type: string
+      grauAcademico:
+        type: string
+      turno:
+        type: string
+      sede:
+        type: string
+      unidades:
+        type: array
+        items:
+          $ref: '#/definitions/Unidade'  
+      coordenador:
+        $ref: '#/definitions/Coordenador'
+      curriculos:
+        type: array
+        items:
+          $ref: '#/definitions/EstruturaCurricular'
+        
+        
