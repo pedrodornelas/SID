@@ -1,0 +1,25 @@
+{
+    "_type": "DisciplinaEstruturaCurricular",
+    "tipo": "Optativa",
+    "nivel": "9",
+    "modalidade": "Presencial",
+    "disciplina": {
+        "_type": "Disciplina",
+        "codigo": "ENE0088",
+        "nome": "SISTEMAS DE INFORMAÇÃO DISTRIBUÍDOS",
+        "unidade": {
+            "codigo": "ENE",
+            "nome": "DEPARTAMENTO DE ENGENHARIA ELÉTRICA"
+        },
+        "cargaHoraria": {
+            "teorica": 60,
+            "practica": 0
+        },
+        "preRequisitos": [
+            {
+                "codigo": "ENE0025",
+                "nome": "PROTOCOLOS DE TRANSPORTE E ROTEAMENTO"
+            }
+        ]
+    }
+}

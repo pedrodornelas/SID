@@ -1,0 +1,17 @@
+[
+    {
+        "_type": "Disciplina",
+        "codigo": "ENE0088",
+        "nome": "SISTEMAS DE INFORMAÇÃO DISTRIBUÍDOS"
+    },
+    {
+        "_type": "Disciplina",
+        "codigo": "ENE0344",
+        "nome": "COMUNICAÇÕES MÓVEIS"
+    },
+    {
+        "_type": "Disciplina",
+        "codigo": "EPR0068",
+        "nome": "ORGANIZAÇÃO INDUSTRIAL"
+    }
+]

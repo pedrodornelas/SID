@@ -1,0 +1,30 @@
+{
+    "_type:": "Turma",
+    "codigo": "A",
+    "vagasOfertadas": 20,
+    "vagasOcupadas": 17,
+    "periodoLetivo": {
+        "ano": 2018,
+        "numero": 2
+    },
+    "horarios": [
+        {
+            "dia": "Segunda",
+            "horaInicio": "8h",
+            "horaFim": "10h",
+            "local": "Faculdade de Tecnologia - Sala BT15/37",
+            "professor": {
+                "nome": "GEORGES DANIEL AMVAME NZE"
+            }
+        },
+        {
+            "dia": "Quarta",
+            "horaInicio": "8h",
+            "horaFim": "10h",
+            "local": "Faculdade de Tecnologia - Sala BT15/37",
+            "professor": {
+                "nome": "GEORGES DANIEL AMVAME NZE"
+            }
+        }
+    ]
+}
