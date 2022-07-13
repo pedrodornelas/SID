@@ -1,0 +1,98 @@
+[
+    {
+        "_type": "Turma",
+        "codigo": "A",
+        "disciplina": {
+            "type": "Disciplina",
+            "codigo": "ENE0088",
+            "nome": "SISTEMAS DE INFORMAÇÃO DISTRIBUÍDOS"
+          },
+        "periodoLetivo": {
+            "type": "PeriodoLetivo",
+            "ano": 2022,
+            "numero": 1
+        },
+        "horarios": [
+
+            {
+               "type": "HorarioSemanal",
+               "dia": "Segunda",
+               "horaInicio": "18h",
+               "horaFim": "20h"
+            },
+
+            {
+               "type": "HorarioSemanal",
+               "dia": "Quarta",
+               "horaInicio": "18h",
+               "horaFim": "20h"
+            }
+        ]
+
+    },
+
+    {
+        "_type": "Turma",
+        "codigo": "A",
+        "disciplina": {
+            "type": "Disciplina",
+            "codigo": "ENE0025",
+            "nome": "PROTOCOLOS DE TRANSPORTE E ROTEAMENTO"
+          },
+        "periodoLetivo": {
+            "type": "PeriodoLetivo",
+            "ano": 2019,
+            "numero": 1
+        },
+        "horarios": [
+
+            {
+               "type": "HorarioSemanal",
+               "dia": "Segunda",
+               "horaInicio": "10h",
+               "horaFim": "12h"
+            },
+
+            {
+               "type": "HorarioSemanal",
+               "dia": "Quarta",
+               "horaInicio": "10h",
+               "horaFim": "12h"
+            }
+        ]
+
+    },
+
+    {
+        "_type": "Turma",
+        "codigo": "A",
+        "disciplina": {
+            "type": "Disciplina",
+            "codigo": "ENE0306",
+            "nome": "PRINCIPIOS DE COMUNICAÇÃO"
+          },
+        "periodoLetivo": {
+            "type": "PeriodoLetivo",
+            "ano": 2021,
+            "numero": 1
+        },
+        "horarios": [
+
+            {
+               "type": "HorarioSemanal",
+               "dia": "Terça",
+               "horaInicio": "8h",
+               "horaFim": "10h"
+            },
+
+            {
+               "type": "HorarioSemanal",
+               "dia": "Quinta",
+               "horaInicio": "8h",
+               "horaFim": "10h"
+            }
+        ]
+
+    }
+
+]

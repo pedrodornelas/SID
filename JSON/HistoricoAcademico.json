@@ -1,0 +1,49 @@
+[
+
+        {
+           "_type": "HistoricoAcademico",
+           "turmaHistoricoAcademico": {
+               "type": "turmaHistoricoAcademico",
+               "aprovacao": true,
+               "mencao": "MS",
+           },
+           "aluno":{
+              "type": "Aluno",
+               "matricula": "180119770",
+               "nome": "Fabricio de Oliveira Barcelos",
+               "ira": 3.9
+              }
+        },
+
+        {
+           "_type": "HistoricoAcademico",
+           "turmaHistoricoAcademico": {
+               "type": "turmaHistoricoAcademico",
+               "aprovacao": false,
+               "mencao": "MI",
+           },
+           "aluno":{
+               "type": "Aluno",
+               "matricula": "180476320",
+               "nome": "Gabriel Barbosa",
+               "ira": 4.3
+              }
+
+        },
+
+        {
+           "_type": "HistoricoAcademico",
+           "turmaHistoricoAcademico": {
+               "type": "turmaHistoricoAcademico",
+               "aprovacao": true,
+               "mencao": "SS",
+           },
+           "aluno":{
+               "type": "Aluno",
+               "matricula": "170228331",
+               "nome": "Adenor Assis Tite",
+               "ira": 5.0
+              }
+        }
+
+]
